@@ -13,17 +13,10 @@ function TestDrawBox() {
   
   // Box生成
   var box = new b2PolygonShape();
-  box.SetAsBoxXY(0, 0);
+  // サイズを指定
+  box.SetAsBoxXY(0.5, 2);
   
   fd = new b2FixtureDef();
   fd.shape = box;
   ground.CreateFixtureFromDef(fd);
-  
-  bd = new b2BodyDef();
-  bd.type = b2_dynamicBody;
-  bd.position.Set(0, 3);
-  var attachment = world.CreateBody(bd);
-
-  box.SetAsBoxXY(0.5, 2);
-  attachment.CreateFixtureFromShape(box, 2);
 }
