@@ -24,7 +24,6 @@ function TestDrawBox() {
   bd.position.Set(0, 3);
   var attachment = world.CreateBody(bd);
 
-  var box = new b2PolygonShape();
   box.SetAsBoxXY(0.5, 2);
   attachment.CreateFixtureFromShape(box, 2);
 }
