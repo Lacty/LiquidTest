@@ -20,4 +20,10 @@ function TestDrawBox() {
   ground = world.CreateBody(body);       // ２度目
   ground.CreateFixtureFromShape(box, 0); // 第２引数が何を示しているか不明
                                          // 今のところ何を指定しても変化なし
+                                         
+  box = new b2PolygonShape();
+  box.SetAsBoxXY(3, 1);
+  body.position.Set(1, 3);
+  ground = world.CreateBody(body);
+  ground.CreateFixtureFromShape(box, 0);
 }
